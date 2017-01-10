@@ -6,7 +6,7 @@
 /*   By: pvan-erp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 17:50:54 by pvan-erp          #+#    #+#             */
-/*   Updated: 2016/12/23 15:09:25 by pvan-erp         ###   ########.fr       */
+/*   Updated: 2017/01/10 15:17:59 by pvan-erp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,8 @@ void			*ft_strresize(char *ptr, size_t size);
 size_t			ft_wrdlen(char *wrd, char delim);
 unsigned int	ft_sqrt_ceil(unsigned int sq);
 size_t			ft_wcslen(const wchar_t *s);
-char			*ft_itoa_base(long n, unsigned int radix);
+char			*ft_itoa_base(unsigned long n, const unsigned int radix);
+char			*ft_itobase(unsigned long n, const unsigned int radix,
+		const char *base);
 
 #endif
