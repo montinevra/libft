@@ -6,7 +6,7 @@
 /*   By: pvan-erp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/10 15:08:30 by pvan-erp          #+#    #+#             */
-/*   Updated: 2017/01/10 15:17:46 by pvan-erp         ###   ########.fr       */
+/*   Updated: 2017/01/11 21:49:03 by pvan-erp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ char				*ft_itobase(unsigned long n, const unsigned int radix,
 		return ("0");
 	if (radix < 2 || radix > ft_strlen(base))
 		return ("undefined");
-	if (radix == 10)
-		return (ft_itoa(n));
 	digits = get_digits_base(n, radix);
 	if (!(fresh = ft_strnew(digits)))
 		return (NULL);
