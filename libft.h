@@ -92,6 +92,7 @@ void			*ft_strresize(char *ptr, size_t size);
 size_t			ft_wrdlen(char *wrd, char delim);
 unsigned int	ft_sqrt_ceil(unsigned int sq);
 size_t			ft_wcslen(const wchar_t *s);
+size_t			ft_ustrlen(const wchar_t *s);
 char			*ft_itoa_base(unsigned long n, const unsigned int radix);
 char			*ft_itobase(unsigned long n, const unsigned int radix,
 		const char *base);
