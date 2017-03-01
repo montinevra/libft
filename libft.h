@@ -6,7 +6,7 @@
 /*   By: pvan-erp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 17:50:54 by pvan-erp          #+#    #+#             */
-/*   Updated: 2017/01/27 17:08:26 by pvan-erp         ###   ########.fr       */
+/*   Updated: 2017/03/01 14:41:37 by pvan-erp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,6 @@ char			*ft_itobase(unsigned long n, const unsigned int radix,
 		const char *base);
 void			ft_strfill(void *s, size_t n, char c);
 unsigned int	ft_atoi_base(const char *str, const unsigned int radix);
+int				get_next_line(const int fd, char **line);
 
 #endif

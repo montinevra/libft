@@ -6,7 +6,7 @@
 #    By: pvan-erp <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/25 20:54:37 by pvan-erp          #+#    #+#              #
-#    Updated: 2017/02/06 01:16:29 by pvan-erp         ###   ########.fr        #
+#    Updated: 2017/03/01 14:41:27 by pvan-erp         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,8 @@ SRC = \
 	ft_strndup.c \
 	ft_strresize.c ft_wrdlen.c ft_sqrt_ceil.c \
 	ft_wcslen.c ft_ustrlen.c ft_itoa_base.c ft_itobase.c\
-	ft_strfill.c
+	ft_strfill.c \
+	get_next_line.c
 OBJ = $(SRC:.c=.o)
 
 .PHONY: all clean fclean re
@@ -55,5 +56,4 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
 
