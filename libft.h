@@ -6,7 +6,7 @@
 /*   By: pvan-erp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 17:50:54 by pvan-erp          #+#    #+#             */
-/*   Updated: 2017/03/04 16:49:26 by pvan-erp         ###   ########.fr       */
+/*   Updated: 2017/03/04 17:43:45 by pvan-erp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
-size_t			ft_memlen(const void *s);
 size_t			ft_strlen(const char *s);
 char			*ft_strdup(const char *s1);
 char			*ft_strcpy(char *dst, const char *src);
@@ -99,5 +98,7 @@ char			*ft_itobase(unsigned long n, const unsigned int radix,
 		const char *base);
 unsigned int	ft_atoi_base(const char *str, const unsigned int radix);
 int				get_next_line(const int fd, char **line);
+char			**ft_arrnew(size_t size);
+size_t			ft_arrlen(const void *a);
 
 #endif

@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memlen.c                                        :+:      :+:    :+:   */
+/*   ft_arrnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pvan-erp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/04 16:47:45 by pvan-erp          #+#    #+#             */
-/*   Updated: 2017/03/04 16:47:47 by pvan-erp         ###   ########.fr       */
+/*   Created: 2017/03/04 17:48:11 by pvan-erp          #+#    #+#             */
+/*   Updated: 2017/03/04 17:48:21 by pvan-erp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_memlen(const void *s)
+char	**ft_arrnew(size_t size)
 {
-	size_t i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	return ((char **)ft_memalloc(sizeof(char *) * (size + 1)));
 }
