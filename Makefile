@@ -6,7 +6,7 @@
 #    By: pvan-erp <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/25 20:54:37 by pvan-erp          #+#    #+#              #
-#    Updated: 2017/03/04 17:49:53 by pvan-erp         ###   ########.fr        #
+#    Updated: 2017/03/05 23:14:24 by pvan-erp         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,13 +30,13 @@ SRC = \
 	ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c \
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 	ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c \
-	ft_lstiter.c ft_lstmap.c \
+	ft_lstiter.c ft_lstmap.c ft_lstlen.c \
 	ft_islower.c ft_isupper.c ft_isnumber.c ft_isblank.c ft_isspace.c \
 	ft_strndup.c \
 	ft_strresize.c ft_wrdlen.c ft_sqrt_ceil.c \
 	ft_wcslen.c ft_ustrlen.c ft_itoa_base.c ft_itobase.c\
 	get_next_line.c \
-	ft_arrnew.c ft_arrlen.c
+	ft_arrnew.c ft_arrlen.c ft_arrdel.c
 OBJ = $(SRC:.c=.o)
 
 .PHONY: all clean fclean re test
@@ -59,5 +59,5 @@ re: fclean all
 
 
 test: all
-	$(CC) main.c -L./ -lft
+	$(CC) main.c alloc-wrap.c -L./ -lft
 	./a.out

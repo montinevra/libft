@@ -6,7 +6,7 @@
 /*   By: pvan-erp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 17:50:54 by pvan-erp          #+#    #+#             */
-/*   Updated: 2017/03/04 17:43:45 by pvan-erp         ###   ########.fr       */
+/*   Updated: 2017/03/05 23:15:04 by pvan-erp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+size_t			ft_lstlen(t_list *lst);
 int				ft_islower(int c);
 int				ft_isupper(int c);
 int				ft_isnumber(int c);
@@ -100,5 +101,6 @@ unsigned int	ft_atoi_base(const char *str, const unsigned int radix);
 int				get_next_line(const int fd, char **line);
 char			**ft_arrnew(size_t size);
 size_t			ft_arrlen(const void *a);
+void			ft_arrdel(void **a);
 
 #endif
