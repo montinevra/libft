@@ -6,11 +6,26 @@
 /*   By: pvan-erp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/28 19:17:21 by pvan-erp          #+#    #+#             */
-/*   Updated: 2017/03/01 14:41:48 by pvan-erp         ###   ########.fr       */
+/*   Updated: 2017/03/10 00:03:20 by pvan-erp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+/*
+**	how to free properly:
+**
+**	char	**line;
+**
+**	line = (char **)malloc(sizeof(char *));
+**	while (get_next_line(fd, line) > 0)
+**	{
+**		// whatever
+**		free(*line);
+**	}
+**	free(*line);
+**	free(line);
+*/
 
 static t_stock	*new_stock(int fd)
 {
