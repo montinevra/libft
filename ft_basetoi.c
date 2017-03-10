@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arrlen.c                                        :+:      :+:    :+:   */
+/*   ft_basetoi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pvan-erp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/04 17:05:11 by pvan-erp          #+#    #+#             */
-/*   Updated: 2017/03/09 17:16:14 by pvan-erp         ###   ########.fr       */
+/*   Created: 2017/03/09 17:06:23 by pvan-erp          #+#    #+#             */
+/*   Updated: 2017/03/09 17:16:35 by pvan-erp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-**	for use with pointer arrays
-*/
-
-size_t	ft_arrlen(const void *a)
+unsigned int	ft_basetoi(const char *str, const char *base,
+		const unsigned int radix)
 {
-	size_t i;
+	unsigned int	nb;
+	size_t			i;
 
 	i = 0;
-	while (*((char **)a + i))
+	nb = 0;
+	if (radix > 16)
+		return (0);
+	while (ft_isspace(str[i]))
 		i++;
-	return (i);
+	while (str[i] != '\0' && ft_strchr(base, str[i]) &&
+			ft_strchr(base, str[i]) - base < radix)
+	{
+		nb *= radix;
+		nb += ft_strchr(base, str[i]) - base;
+		i++;
+	}
+	return (nb);
 }
