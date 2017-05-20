@@ -6,7 +6,7 @@
 /*   By: pvan-erp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 17:50:54 by pvan-erp          #+#    #+#             */
-/*   Updated: 2017/03/09 17:16:25 by pvan-erp         ###   ########.fr       */
+/*   Updated: 2017/05/08 22:11:37 by pvan-erp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,6 @@ char			**ft_arrnew(size_t size);
 size_t			ft_arrlen(const void *a);
 void			ft_arrdel(void **a);
 void			ft_arrldel(void **a, size_t len);
+int				ft_printf(const char *restrict format, ...);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: pvan-erp <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/25 20:54:37 by pvan-erp          #+#    #+#              #
-#    Updated: 2017/03/09 17:15:19 by pvan-erp         ###   ########.fr        #
+#    Updated: 2017/05/08 22:13:54 by pvan-erp         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,11 +45,16 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 	
 
-$(NAME): $(SRC)
+$(NAME): $(SRC) ft_printf/ft_printf.a
 	$(CC) -c $(SRC) $(CFLAGS)
+	cp ft_printf/ft_printf.a $(NAME)
 	ar rc $(NAME) $(OBJ)
 
+ft_printf/ft_printf.a:
+	make -C ./ft_printf
+
 clean:
+	make fclean -C ft_printf
 	rm -f $(OBJ)
 
 fclean: clean
