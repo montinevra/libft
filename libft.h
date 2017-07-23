@@ -100,6 +100,8 @@ char			*ft_itobase(unsigned long n, const unsigned int radix,
 unsigned int	ft_atoi_base(const char *str, const unsigned int radix);
 unsigned int	ft_basetoi(const char *str, const char *base,
 		const unsigned int radix);
+double			ft_basetof(char *str, const char *base,
+		const unsigned int radix);
 int				get_next_line(const int fd, char **line);
 char			**ft_arrnew(size_t size);
 size_t			ft_arrlen(const void *a);
