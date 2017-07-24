@@ -37,7 +37,8 @@ SRC = \
 	ft_strresize.c ft_wrdlen.c ft_sqrt_ceil.c \
 	ft_wcslen.c ft_ustrlen.c ft_itoa_base.c ft_itobase.c\
 	get_next_line.c \
-	ft_arrnew.c ft_arrlen.c ft_arrdel.c ft_arrldel.c
+	ft_arrnew.c ft_arrlen.c ft_arrdel.c ft_arrldel.c \
+	ft_strtoupper.c ft_strtolower.c
 OBJ = $(SRC:.c=.o)
 
 .PHONY: all clean fclean re test
