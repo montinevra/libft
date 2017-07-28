@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_basetoi.c                                       :+:      :+:    :+:   */
+/*   ft_atof.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pvan-erp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/09 17:06:23 by pvan-erp          #+#    #+#             */
-/*   Updated: 2017/07/27 20:05:47 by pvan-erp         ###   ########.fr       */
+/*   Created: 2017/07/27 20:04:38 by pvan-erp          #+#    #+#             */
+/*   Updated: 2017/07/27 20:05:03 by pvan-erp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_basetoi(const char *str, const char *base,
-		const unsigned int radix)
+double	ft_atof(const char *str)
 {
-	unsigned int	nb;
-	size_t			i;
+	double	nb;
+	int		i;
+	int		sign;
 
-	i = 0;
 	nb = 0;
-	while (ft_isspace(str[i]))
-		i++;
-	while (str[i] != '\0' && ft_strchr(base, str[i]) &&
-			ft_strchr(base, str[i]) - base < radix)
+	sign = 1;
+	if (str)
 	{
-		nb *= radix;
-		nb += ft_strchr(base, str[i]) - base;
-		i++;
+		i = 0;
+		while (ft_isspace(str[i]))
+			i++;
+		if (str[i] == '-')
+			sign = -1;
+		if (str[i] == '+' || str[i] == '-')
+			i++;
+		nb = ft_atof_base(&str[i], 10);
 	}
-	return (nb);
+	return (nb * sign);
 }

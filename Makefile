@@ -21,7 +21,7 @@ SRC = \
 	ft_strchr.c ft_strrchr.c ft_strstr.c ft_strnstr.c \
 	ft_strcmp.c ft_strncmp.c \
 	ft_atoi.c ft_atoi_base.c ft_basetoi.c \
-	ft_basetof.c \
+	ft_atof.c ft_atof_base.c ft_basetof.c \
 	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	ft_toupper.c ft_tolower.c \
 	ft_memalloc.c ft_memdel.c ft_strnew.c ft_strdel.c ft_strclr.c \
